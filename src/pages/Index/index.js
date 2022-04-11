@@ -1,3 +1,5 @@
+import { Background } from "./styles";
+
 export default function Index() {
-  return <p style={{color: "black"}}>asdsadasdasd</p>;
+  return <Background></Background>;
 }
