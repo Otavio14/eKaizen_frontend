@@ -1,36 +1,16 @@
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
-
-export default App;
-
-
-import React from 'react'
-import Routes from '../src/routes'
-import GlobalStyle from './styles/globalStyles'
+import React from "react";
+import Index from "./pages/Index";
+import GlobalStyle from "./globalStyles";
+// import Navbar from "./components/Navbar";
+// import Footer from "./components/Footer";
 
 export default function App() {
   return (
     <>
-      <Routes />
+      {/* <Navbar /> */}
+      <Index />
+      {/* <Footer /> */}
       <GlobalStyle />
     </>
   );
-};
+}
