@@ -3,8 +3,10 @@ import { createGlobalStyle } from "styled-components";
 export default createGlobalStyle`
     :root{
         /* Cores globais, para usar chame assim: background-color: var(--red-color) */
-        --red-color: #e8343d;
-        --blue-color: #2B74E0;
+        --light-blue-color: #7CCCE4;
+        --green-color: #7CA484;
+        --blue-color: #0494CB;
+        --yellow-color: #F3A246;
     }
     *{
         margin: 0;

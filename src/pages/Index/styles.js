@@ -5,6 +5,6 @@ export const Background = styled.div`
   min-height: 100vh;
   width: 100%;
   height: 100%;
-  background-color: gray;
+  /* background-color: var(--green-color); */
   padding-top: 80px;
 `;
