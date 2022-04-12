@@ -16,7 +16,7 @@ export const LogoDiv = styled.div`
   justify-content: center;
 `;
 
-export const Menu = styled.div`
+export const Menu = styled.nav`
   display: flex;
   align-items: center;
   border: 1px solid red;
@@ -33,4 +33,7 @@ export const Title = styled.h1``;
 
 export const Link = styled.div`
   cursor: pointer;
+  text-align: center;
+  font-size: 1.3rem;
+  width: 150px;
 `;
