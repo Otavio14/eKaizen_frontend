@@ -15,6 +15,22 @@ export default createGlobalStyle`
         box-sizing: border-box;
         font-family: Arial, sans-serif;
         overflow-x: hidden;
+        user-select: none;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select: none;
+        -khtml-user-select: none;
+    }
+    body {
+        &::-webkit-scrollbar {
+            width: 8px;
+            background-color: gray;
+            color: white;
+        }
+        &::-webkit-scrollbar-thumb {
+            background-color: lightgray;
+            border-radius: 1rem;
+        }
     }
   }
 `;

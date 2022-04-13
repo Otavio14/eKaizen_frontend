@@ -1,4 +1,19 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
+
+const Animation = keyframes`
+  0% {
+    margin-left: 0;
+  }
+  33% {
+    margin-left: -100%;
+  }
+  66% {
+    margin-left: -200%;
+  }
+  100% {
+    margin-left: 0;
+  }
+`;
 
 export const Container = styled.div`
   width: 80vw;
@@ -20,10 +35,21 @@ export const Items = styled.div`
   width: 100%;
   height: 100%;
   overflow: hidden;
-  overflow-x: auto;
   display: flex;
-  scroll-snap-type: x mandatory;
-  scroll-behavior: smooth;
+
+  &:hover {
+    .img1 {
+      animation-play-state: paused;
+    }
+  }
+
+  .img1 {
+    animation: ${Animation} 10s infinite;
+    /* animation-delay: 5s;
+    -webkit-animation-delay: 5s; */
+    transition: margin-left 2s;
+    margin-left: ${(props) => "-" + props.position + "00%"};
+  }
 `;
 
 export const Item = styled.div`
@@ -31,6 +57,8 @@ export const Item = styled.div`
   height: 100%;
   flex: none;
   object-fit: cover;
-  scroll-snap-align: start;
-`;
 
+  img {
+    width: 100%;
+  }
+`;
