@@ -23,7 +23,7 @@ export const Main = styled.div`
 
 export const About = styled.div`
   display: grid;
-  height: 400px;
+  height: 500px;
   width: 60vw;
   border: 1px solid red;
   grid-template-rows: auto 1fr;
