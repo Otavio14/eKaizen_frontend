@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Container, Item, Items } from "./styles";
 import Img1 from "../../assets/Imagem 1.jpg";
 import Img2 from "../../assets/Imagem 2.jpg";
@@ -12,17 +12,13 @@ export default function Carousel() {
     <Container>
       <BsChevronLeft
         className="arrowLeft"
-        size={50}
+        size={80}
+        color="var(--blue-color)"
         onClick={() => {
           setPosition(position > 0 ? position - 1 : 2);
         }}
       />
-      <Items
-        position={position}
-        onScroll={(event) => {
-          // console.log(event.currentTarget.scrollLeft);
-        }}
-      >
+      <Items position={position}>
         <Item className="img1">
           <img src={Img1} alt="Erro" />
         </Item>
@@ -35,7 +31,8 @@ export default function Carousel() {
       </Items>
       <BsChevronRight
         className="arrowRight"
-        size={50}
+        size={80}
+        color="var(--blue-color)"
         onClick={() => {
           setPosition(position < 2 ? position + 1 : 0);
         }}

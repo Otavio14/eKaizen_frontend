@@ -9,7 +9,6 @@ export const Container = styled.div`
   flex-direction: column;
   align-items: center;
   padding-top: 200px;
-  background-color: var(--green-color);
 `;
 
 export const Main = styled.div`
@@ -23,6 +22,8 @@ export const Main = styled.div`
 export const Title = styled.h1`
   text-align: center;
   margin-bottom: 50px;
+  font-size: 2.5rem;
+  color: var(--orange-color);
 `;
 
 export const Cards = styled.div`

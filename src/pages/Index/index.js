@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import {
   Container,
   About,
@@ -9,29 +9,66 @@ import {
   Contact,
   Links,
   Link,
-  Background,
+  Animation,
 } from "./styles";
 import Carousel from "../../components/Carousel";
 import About_Us from "../../assets/about_us.jpg";
 import { MdEmail } from "react-icons/md";
 import { BsTelephoneFill } from "react-icons/bs";
 import { FaHandsHelping, FaYoutube } from "react-icons/fa";
+import Svg from "../../assets/background.png";
+import Frisbee from "../../assets/frisbee.png";
+import FrisbeeMov from "../../assets/frisbeeMov.png";
+import Jumping from "../../assets/jumping.png";
+import Person from "../../assets/person.png";
+import Running from "../../assets/running.png";
 
 export default function Index() {
+  const [screenWidth, setScreenWidth] = useState(window.screen.width);
+  const [screenHeigth, setScreenHeigth] = useState(window.screen.height);
+  const [scrollPosition, setScrollPosition] = useState(0);
+  const handleScroll = () => {
+    const position = window.pageYOffset;
+    setScrollPosition(position);
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  useEffect(() => {
+    console.log(scrollPosition);
+  }, [scrollPosition]);
+
   return (
     <Container>
-      <Main>
+      <Main style={{ backgroundImage: `url(${Svg})` }}>
         <Carousel />
-        {/* <Background>
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <div className="custom-shape-divider-bottom-1649962317">
+          <svg
+            data-name="Layer 1"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 1200 120"
+            preserveAspectRatio="none"
+            fill="white"
+          >
             <path
-              fill="#7CA484"
-              fill-opacity="1"
-              d="M0,288L80,256C160,224,320,160,480,165.3C640,171,800,245,960,277.3C1120,309,1280,299,1360,293.3L1440,288L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"
+              d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z"
+              className="shape-fill"
             ></path>
           </svg>
-        </Background> */}
+        </div>
       </Main>
+      <Animation scrollposition={scrollPosition}>
+        <img src={Person} className="person" alt="Error" />
+        <img src={FrisbeeMov} className="frisbeemov" alt="Error" />
+        <img src={Jumping} className="jumping" alt="Error" />
+        <img src={Frisbee} className="frisbee" alt="Error" />
+        <img src={Running} className="running" alt="Error" />
+      </Animation>
       <About id="about">
         <Image src={About_Us} />
         <Title>Sobre Nós</Title>

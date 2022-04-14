@@ -11,6 +11,7 @@ export default createGlobalStyle`
         --orange-color: #FE7F2D;
         --yellow-color: #FCCA46;
         --green-color: #A1C181;
+        --light-green-color: #d6f1ba;
         --light-blue-color: #619B8A;
     }
     *{
@@ -29,11 +30,11 @@ export default createGlobalStyle`
     body {
         &::-webkit-scrollbar {
             width: 8px;
-            background-color: gray;
+            background-color: var(--blue-color);
             color: white;
         }
         &::-webkit-scrollbar-thumb {
-            background-color: lightgray;
+            background-color: var(--orange-color);
             border-radius: 1rem;
         }
     }

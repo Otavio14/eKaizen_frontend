@@ -7,7 +7,9 @@ export const Container = styled.div`
   display: flex;
   align-items: center;
   position: fixed;
-  background-color: rgba(161, 193, 129, 0.5);
+  z-index: 1;
+  /* background-color: rgba(161, 193, 129, 0.5); */
+  background-color: var(--blue-color);
 `;
 
 export const LogoDiv = styled.div`
@@ -33,7 +35,7 @@ export const Logo = styled.img`
 `;
 
 export const Title = styled.h1`
-  color: var(--blue-color);
+  color: var(--orange-color);
   /* text-transform: uppercase; */
   font-family: cursive, Arial !important;
 `;

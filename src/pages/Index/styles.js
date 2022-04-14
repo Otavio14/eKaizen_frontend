@@ -10,17 +10,58 @@ export const Container = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: var(--green-color);
+  /* background-color: var(--green-color); */
+  background-repeat: repeat;
+  /* background-image: url("../../assets/background.png"); */
 `;
 
-export const Background = styled.div`
-  position: absolute;
-  top: 65%;
-  left: 0;
+export const Animation = styled.div`
+  border: 1px solid red;
   width: 100%;
-  height: fit-content;
-  z-index: -1;
-  /* border: 1px solid red; */
+  height: 90px;
+  position: relative;
+  padding: 0 200px;
+
+  .person {
+    width: 80px;
+    position: absolute;
+    top: 0;
+  }
+  .frisbeemov {
+    width: 30px;
+    position: absolute;
+    top: 0;
+    transform: rotate(45deg);
+    transition: transform 1s;
+    transform: ${(props) => `translateX(${props.scrollposition + 40}px)`};
+    display: none;
+  }
+  .jumping {
+    width: 80px;
+    transform: scaleX(-1);
+    position: absolute;
+    display: none;
+    top: 0;
+  }
+  .frisbee {
+    position: absolute;
+    top: 0;
+    border: 1px solid red;
+    width: 30px;
+    z-index: 1;
+    transition: transform 1s;
+    transform: ${(props) => `translateX(${props.scrollposition + 40}px)`};
+    /* &:hover {
+      transform: rotate(45deg);
+    } */
+  }
+  .running {
+    width: 80px;
+    position: absolute;
+    top: 0;
+    transition: transform 2s;
+    transform: ${(props) => `translateX(${props.scrollposition - 20}px)`};
+  }
 `;
 
 export const Main = styled.div`
@@ -29,10 +70,21 @@ export const Main = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+
+  .custom-shape-divider-bottom-1649962317 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    /* z-index: -1; */
+  }
 `;
 
 export const About = styled.div`
   display: grid;
+  margin-top: 150px;
   height: 500px;
   width: 60vw;
   /* border: 1px solid red; */
