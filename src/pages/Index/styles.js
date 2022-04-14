@@ -5,12 +5,22 @@ export const Container = styled.div`
   min-height: 100vh;
   width: 100%;
   height: 100%;
-  /* background-color: var(--green-color); */
   /* padding-top: 80px; */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  background-color: var(--green-color);
+`;
+
+export const Background = styled.div`
+  position: absolute;
+  top: 65%;
+  left: 0;
+  width: 100%;
+  height: fit-content;
+  z-index: -1;
+  /* border: 1px solid red; */
 `;
 
 export const Main = styled.div`
@@ -25,7 +35,7 @@ export const About = styled.div`
   display: grid;
   height: 500px;
   width: 60vw;
-  border: 1px solid red;
+  /* border: 1px solid red; */
   grid-template-rows: auto 1fr;
   grid-template-areas:
     "i h"
@@ -51,7 +61,7 @@ export const Image = styled.img`
 
 export const Contact = styled.div`
   width: 60vw;
-  border: 1px solid red;
+  /* border: 1px solid red; */
   height: 400px;
   display: grid;
   align-items: center;

@@ -9,6 +9,7 @@ export const Container = styled.div`
   flex-direction: column;
   align-items: center;
   padding-top: 200px;
+  background-color: var(--green-color);
 `;
 
 export const Main = styled.div`
@@ -16,7 +17,7 @@ export const Main = styled.div`
   height: 100%;
   display: flex;
   flex-direction: column;
-  border: 1px solid red;
+  /* border: 1px solid red; */
 `;
 
 export const Title = styled.h1`

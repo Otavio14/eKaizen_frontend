@@ -8,10 +8,6 @@ import { BsChevronRight, BsChevronLeft } from "react-icons/bs";
 export default function Carousel() {
   const [position, setPosition] = useState(0);
 
-  useEffect(() => {
-    console.log(position);
-  }, [position]);
-
   return (
     <Container>
       <BsChevronLeft

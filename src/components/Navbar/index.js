@@ -19,8 +19,39 @@ export default function Navbar() {
         >
           Início
         </Link>
-        <Link>Sobre</Link>
-        <Link>Contato</Link>
+        <Link
+          onClick={() => {
+            if (window.location.pathname !== "/") navigate("/");
+            setTimeout(() => {
+              window.scrollTo({
+                top:
+                  document.querySelector("#about").getBoundingClientRect().top +
+                  window.pageYOffset -
+                  80,
+                behavior: "smooth",
+              });
+            }, 500);
+          }}
+        >
+          Sobre
+        </Link>
+        <Link
+          onClick={() => {
+            if (window.location.pathname !== "/") navigate("/");
+            setTimeout(() => {
+              window.scrollTo({
+                top:
+                  document.querySelector("#contact").getBoundingClientRect()
+                    .top +
+                  window.pageYOffset -
+                  80,
+                behavior: "smooth",
+              });
+            }, 500);
+          }}
+        >
+          Contato
+        </Link>
         <Link
           onClick={() => {
             navigate("/pets");

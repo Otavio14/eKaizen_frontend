@@ -18,7 +18,7 @@ const Animation = keyframes`
 export const Container = styled.div`
   width: 80vw;
   /* height: 100%; */
-  border: 1px solid green;
+  /* border: 1px solid green; */
   display: flex;
   align-items: center;
 
@@ -31,7 +31,7 @@ export const Container = styled.div`
 `;
 
 export const Items = styled.div`
-  border: 1px solid red;
+  /* border: 1px solid red; */
   width: 100%;
   height: 100%;
   overflow: hidden;
@@ -44,7 +44,7 @@ export const Items = styled.div`
   }
 
   .img1 {
-    animation: ${Animation} 10s infinite;
+    /* animation: ${Animation} 10s infinite; */
     /* animation-delay: 5s;
     -webkit-animation-delay: 5s; */
     transition: margin-left 2s;

@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  border: 1px solid red;
+  /* border: 1px solid red; */
   width: 300px;
   border-radius: 1rem;
   display: flex;
@@ -15,7 +15,9 @@ export const Image = styled.img`
   object-fit: cover;
 `;
 
-export const Text = styled.p``;
+export const Text = styled.p`
+  text-align: justify;
+`;
 
 export const Button = styled.button`
     text-transform: uppercase;
