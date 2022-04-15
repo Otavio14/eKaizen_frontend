@@ -1,17 +1,31 @@
-import { Container, Image, Text, Button } from "./styles";
+import { Container, Image, Text, Button, Info } from "./styles";
+import { BsInfoLg } from "react-icons/bs";
 
-export default function Card({ data, setShowModal }) {
+export default function Card({
+  data,
+  setShowModalAdopt,
+  setShowModalInfo,
+  setPetId,
+}) {
   return (
     <Container>
       <Image src={data.image} />
       <Text>{data.description}</Text>
       <Button
         onClick={() => {
-          setShowModal(true);
+          setShowModalAdopt(true);
         }}
       >
         Adotar
       </Button>
+      <Info
+        onClick={() => {
+          setShowModalInfo(true);
+          setPetId(data.id);
+        }}
+      >
+        <BsInfoLg color="white" />
+      </Info>
     </Container>
   );
 }

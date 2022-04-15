@@ -7,7 +7,7 @@ export const Container = styled.div`
   display: flex;
   align-items: center;
   position: fixed;
-  z-index: 1;
+  z-index: 2;
   /* background-color: rgba(161, 193, 129, 0.5); */
   background-color: var(--blue-color);
 `;
@@ -47,4 +47,9 @@ export const Link = styled.div`
   width: 150px;
   color: white;
   font-weight: bolder;
+  transition: font-size 0.3s;
+
+  &:hover {
+    font-size: 1.8rem;
+  }
 `;

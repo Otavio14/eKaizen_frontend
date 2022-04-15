@@ -95,8 +95,21 @@ export const About = styled.div`
 `;
 
 export const Title = styled.h1`
-  grid-area: h;
-  padding-left: 50px;
+  text-align: center;
+  margin-bottom: 50px;
+  font-size: 2.5rem;
+  color: var(--orange-color);
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  grid-gap: 22px;
+
+  &:after,
+  &:before {
+    content: " ";
+    display: block;
+    border-bottom: 2px solid var(--orange-color);
+  }
 `;
 
 export const Text = styled.p`

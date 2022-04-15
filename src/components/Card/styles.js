@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { BsInfoLg } from "react-icons/bs";
 
 export const Container = styled.div`
   /* border: 1px solid red; */
@@ -10,6 +11,7 @@ export const Container = styled.div`
   align-items: center;
   box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
   margin: 10px 10px;
+  position: relative;
 `;
 
 export const Image = styled.img`
@@ -35,4 +37,18 @@ export const Button = styled.button`
   border: none;
   cursor: pointer;
   margin: 10px 0;
+`;
+
+export const Info = styled.div`
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 30px;
+  height: 30px;
+  background-color: var(--blue-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border-radius: 0.5rem 0 0 0;
 `;

@@ -8,7 +8,7 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 200px;
+  padding-top: 150px;
 `;
 
 export const Main = styled.div`
@@ -24,6 +24,17 @@ export const Title = styled.h1`
   margin-bottom: 50px;
   font-size: 2.5rem;
   color: var(--orange-color);
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  grid-gap: 22px;
+
+  &:after,
+  &:before {
+    content: " ";
+    display: block;
+    border-bottom: 2px solid var(--orange-color);
+  }
 `;
 
 export const Cards = styled.div`
