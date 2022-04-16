@@ -1,17 +1,27 @@
-import { Container, Logo, Title, Link, LogoDiv, Menu } from "./styles";
+import React, { useState } from "react";
+import {
+  Container,
+  Logo,
+  Title,
+  Link,
+  LogoDiv,
+  Menu,
+  MenuButton,
+} from "./styles";
 import logo from "../../logo.png";
 import { useNavigate } from "react-router-dom";
 
 export default function Navbar() {
+  const [open, setOpen] = useState(false);
   const navigate = useNavigate();
 
   return (
-    <Container>
+    <Container open={open}>
       <LogoDiv>
         <Logo src={logo} />
         <Title>Adota Pet</Title>
       </LogoDiv>
-      <Menu>
+      <Menu open={open}>
         <Link
           onClick={() => {
             navigate("/");
@@ -60,6 +70,16 @@ export default function Navbar() {
           Pets
         </Link>
       </Menu>
+      <MenuButton
+        open={open}
+        onClick={() => {
+          setOpen(!open);
+        }}
+      >
+        <div></div>
+        <div></div>
+        <div></div>
+      </MenuButton>
     </Container>
   );
 }

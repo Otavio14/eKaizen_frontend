@@ -18,7 +18,7 @@ export const Background = styled.div`
 
 export const Container = styled.div`
   background-color: #ffffff;
-  width: 40vw;
+  width: fit-content;
   height: fit-content;
   border-radius: 1.5rem;
   padding: 25px;
@@ -26,6 +26,10 @@ export const Container = styled.div`
   align-items: center;
   flex-direction: column;
   position: relative;
+
+  @media (max-width: 520px) {
+    margin: 0 15px;
+  }
 `;
 
 export const CloseButton = styled(MdClose)`
@@ -40,6 +44,11 @@ export const CloseButton = styled(MdClose)`
 export const Title = styled.h1`
   text-align: center;
   margin-bottom: 30px;
+  /* border: 1px solid red; */
+
+  @media (max-width: 350px) {
+    width: 75%;
+  }
 `;
 
 export const Table = styled.table`

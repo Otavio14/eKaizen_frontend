@@ -3,30 +3,45 @@ import styled from "styled-components";
 export const Container = styled.div`
   height: 80px;
   width: 100%;
-  /* border: 1px solid red; */
   display: flex;
   align-items: center;
   position: fixed;
   z-index: 2;
-  /* background-color: rgba(161, 193, 129, 0.5); */
   background-color: var(--blue-color);
+  transition: height 0.5s;
+
+  @media (max-width: 750px) {
+    height: ${(props) => (props.open ? "auto" : "80px")};
+    align-items: ${(props) => (props.open ? "flex-start" : "center")};
+    flex-direction: ${(props) => (props.open ? "column" : "row")};
+    padding-top: ${(props) => (props.open ? "8px" : "0")};
+  }
 `;
 
 export const LogoDiv = styled.div`
   display: flex;
   align-items: center;
   width: 300px;
-  /* border: 1px solid purple; */
+  /* height: 80px; */
+  /* border: 1px solid red; */
   justify-content: center;
 `;
 
 export const Menu = styled.nav`
   display: flex;
   align-items: center;
-  /* border: 1px solid blue; */
+  /* border: 1px solid red; */
   height: 100%;
-  width: 100%;
+  width: 90%;
   justify-content: center;
+
+  @media (max-width: 750px) {
+    /* position: absolute; */
+    width: 300px;
+    left: 0;
+    flex-direction: column;
+    display: ${(props) => (props.open ? "flex" : "none")};
+  }
 `;
 
 export const Logo = styled.img`
@@ -36,7 +51,8 @@ export const Logo = styled.img`
 
 export const Title = styled.h1`
   color: var(--orange-color);
-  /* text-transform: uppercase; */
+  font-size: 2rem;
+  white-space: nowrap;
   font-family: cursive, Arial !important;
 `;
 
@@ -49,7 +65,52 @@ export const Link = styled.div`
   font-weight: bolder;
   transition: font-size 0.3s;
 
+  @media (max-width: 750px) {
+    margin: 10px 0;
+  }
+
   &:hover {
     font-size: 1.8rem;
+  }
+`;
+export const MenuButton = styled.div`
+  position: absolute;
+  top: 0;
+  right: 30px;
+  height: 80px;
+  width: 40px;
+  display: flex;
+  /* border: 1px solid red; */
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  cursor: pointer;
+
+  div:nth-child(1) {
+    transform: ${(props) => (props.open ? "rotate(-45deg)" : "rotate(0)")};
+    transform-origin: top right;
+  }
+
+  div:nth-child(2) {
+    transform: ${(props) => (props.open ? "scaleX(0)" : "scaleX(100%)")};
+    transform-origin: right;
+  }
+
+  div:nth-child(3) {
+    transform: ${(props) => (props.open ? "rotate(45deg)" : "rotate(0)")};
+    transform-origin: bottom right;
+  }
+
+  @media (min-width: 750px) {
+    display: none;
+  }
+
+  div {
+    transition: all 1s;
+    margin: 3px 0;
+    width: 30px;
+    height: 4px;
+    border-radius: 1rem;
+    background-color: var(--orange-color);
   }
 `;

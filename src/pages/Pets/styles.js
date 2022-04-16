@@ -17,6 +17,9 @@ export const Main = styled.div`
   display: flex;
   flex-direction: column;
   /* border: 1px solid red; */
+  @media (max-width: 800px) {
+    width: 95%;
+  }
 `;
 
 export const Title = styled.h1`

@@ -26,8 +26,6 @@ export default createGlobalStyle`
         -webkit-user-select: none;
         -ms-user-select: none;
         -khtml-user-select: none;
-    }
-    body {
         &::-webkit-scrollbar {
             width: 8px;
             background-color: var(--blue-color);

@@ -45,8 +45,8 @@ export const Animation = styled.div`
   }
   .frisbee {
     position: absolute;
-    top: 0;
-    border: 1px solid red;
+    top: 16px;
+    /* border: 1px solid red; */
     width: 30px;
     z-index: 1;
     transition: transform 1s;
@@ -85,10 +85,12 @@ export const Main = styled.div`
 export const About = styled.div`
   display: grid;
   margin-top: 150px;
-  height: 500px;
+  height: 400px;
   width: 60vw;
-  /* border: 1px solid red; */
-  grid-template-rows: auto 1fr;
+  align-items: center;
+  justify-content: center;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto 90%;
   grid-template-areas:
     "i h"
     "i p";
@@ -96,13 +98,14 @@ export const About = styled.div`
 
 export const Title = styled.h1`
   text-align: center;
-  margin-bottom: 50px;
+  /* margin-bottom: 50px; */
   font-size: 2.5rem;
   color: var(--orange-color);
   display: grid;
   grid-template-columns: 1fr auto 1fr;
   align-items: center;
   grid-gap: 22px;
+  height: fit-content;
 
   &:after,
   &:before {
@@ -113,21 +116,26 @@ export const Title = styled.h1`
 `;
 
 export const Text = styled.p`
-  align-items: flex-start;
   grid-area: p;
-  padding: 50px;
+  align-items: center;
+  display: flex;
+  padding: 30px;
   text-align: justify;
+  height: 100%;
 `;
 
 export const Image = styled.img`
-  height: 400px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
   grid-area: i;
+  padding-right: 10px;
 `;
 
 export const Contact = styled.div`
   width: 60vw;
-  /* border: 1px solid red; */
-  height: 400px;
+  height: 100%;
+  margin-top: 150px;
   display: grid;
   align-items: center;
   grid-template-columns: 0.7fr 0.3fr;
@@ -138,6 +146,7 @@ export const Contact = styled.div`
 
 export const Links = styled.div`
   grid-area: l;
+  padding-left: 10px;
 `;
 
 export const Link = styled.div`

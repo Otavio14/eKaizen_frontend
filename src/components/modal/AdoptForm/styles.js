@@ -14,11 +14,16 @@ export const Background = styled.div`
   align-items: center;
   justify-content: center;
   z-index: 3;
+
+  @media (max-width: 680px) {
+    align-items: flex-start;
+  }
 `;
 
 export const Container = styled.div`
   background-color: #ffffff;
-  width: 40vw;
+  max-width: 60vw;
+  width: 100%;
   height: fit-content;
   border-radius: 1.5rem;
   padding: 25px;
@@ -26,6 +31,17 @@ export const Container = styled.div`
   align-items: center;
   flex-direction: column;
   position: relative;
+
+  @media (max-width: 1030px) {
+    max-width: 80vw;
+  }
+  @media (max-width: 770px) {
+    max-width: 90vw;
+  }
+  @media (max-width: 680px) {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
 `;
 
 export const Form = styled.form`
@@ -52,6 +68,10 @@ export const CloseButton = styled(MdClose)`
 export const Title = styled.h1`
   text-align: center;
   margin-bottom: 30px;
+
+  @media (max-width: 480px) {
+    width: 75%;
+  }
 `;
 
 export const InputContainer = styled.div`

@@ -14,4 +14,5 @@ export const Container = styled.div`
     props.scrollposition > 0 ? "var(--blue-color)" : "transparent"};
   transition: background-color 0.5s;
   border-radius: 2rem;
+  z-index: 1;
 `;

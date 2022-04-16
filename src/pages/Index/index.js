@@ -75,9 +75,9 @@ export default function Index() {
         <Text>
           Somos uma comunidade de pessoas, que buscam ajudar nossos queridos
           amigos pets, proporcionando a oportunidade deles encontrarem uma
-          família que cuide bem deles. Através da adoção você pode fazer um
-          animalzinho muito mais feliz, não cobramos nenhum valor, porém aos que
-          puderem ajudar, ficaremos muito gratos.
+          família que cuide bem deles. Totalmente sem fins lucrativos,
+          arrecadamos doações e aceitamos voluntários que estejam interessados
+          em se juntar à nós nessa missão tão importante.
         </Text>
       </About>
       <Contact id="contact">
