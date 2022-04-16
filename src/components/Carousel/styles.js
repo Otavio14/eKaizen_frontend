@@ -18,15 +18,23 @@ const Animation = keyframes`
 export const Container = styled.div`
   width: 80vw;
   /* height: 100%; */
-  /* border: 1px solid green; */
+  border: 1px solid red;
   display: flex;
   align-items: center;
 
   .arrowLeft {
     cursor: pointer;
+    position: absolute;
+    left: 0;
   }
   .arrowRight {
     cursor: pointer;
+    position: absolute;
+    right: 0;
+  }
+
+  @media (max-width: 800px) {
+    width: 100%;
   }
 `;
 
@@ -57,6 +65,9 @@ export const Item = styled.div`
   height: 100%;
   flex: none;
   object-fit: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   img {
     width: 100%;

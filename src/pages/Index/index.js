@@ -24,9 +24,9 @@ import Person from "../../assets/person.png";
 import Running from "../../assets/running.png";
 
 export default function Index() {
-  const [screenWidth, setScreenWidth] = useState(window.screen.width);
-  const [screenHeigth, setScreenHeigth] = useState(window.screen.height);
   const [scrollPosition, setScrollPosition] = useState(0);
+  const screen = window.screen.height;
+  const screenWidth = window.screen.width;
   const handleScroll = () => {
     const position = window.pageYOffset;
     setScrollPosition(position);

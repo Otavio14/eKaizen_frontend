@@ -7,13 +7,14 @@ import { BsChevronRight, BsChevronLeft } from "react-icons/bs";
 
 export default function Carousel() {
   const [position, setPosition] = useState(0);
+  const screenWidth = window.screen.width;
 
   return (
     <Container>
       <BsChevronLeft
         className="arrowLeft"
-        size={80}
-        color="var(--blue-color)"
+        size={screenWidth > 800 ? 80 : 50}
+        color={screenWidth > 800 ? "var(--blue-color)" : "var(--orange-color)"}
         onClick={() => {
           setPosition(position > 0 ? position - 1 : 2);
         }}
@@ -31,8 +32,8 @@ export default function Carousel() {
       </Items>
       <BsChevronRight
         className="arrowRight"
-        size={80}
-        color="var(--blue-color)"
+        size={screenWidth > 800 ? 80 : 50}
+        color={screenWidth > 800 ? "var(--blue-color)" : "var(--orange-color)"}
         onClick={() => {
           setPosition(position < 2 ? position + 1 : 0);
         }}
