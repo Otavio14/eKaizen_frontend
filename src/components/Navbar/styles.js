@@ -10,7 +10,7 @@ export const Container = styled.div`
   background-color: var(--blue-color);
   transition: height 0.5s;
 
-  @media (max-width: 750px) {
+  @media (max-width: 790px) {
     height: ${(props) => (props.open ? "auto" : "80px")};
     align-items: ${(props) => (props.open ? "flex-start" : "center")};
     flex-direction: ${(props) => (props.open ? "column" : "row")};
@@ -32,7 +32,7 @@ export const Menu = styled.nav`
   width: 90%;
   justify-content: center;
 
-  @media (max-width: 750px) {
+  @media (max-width: 790px) {
     width: 300px;
     left: 0;
     flex-direction: column;
@@ -61,7 +61,7 @@ export const Link = styled.div`
   font-weight: bolder;
   transition: font-size 0.3s;
 
-  @media (max-width: 750px) {
+  @media (max-width: 790px) {
     margin: 10px 0;
   }
 
@@ -96,12 +96,12 @@ export const MenuButton = styled.div`
     transform-origin: bottom right;
   }
 
-  @media (min-width: 750px) {
+  @media (min-width: 790px) {
     display: none;
   }
 
   div {
-    transition: all 1s;
+    transition: all 0.5s;
     margin: 3px 0;
     width: 30px;
     height: 4px;

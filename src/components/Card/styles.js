@@ -7,7 +7,7 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.2);
   margin: 10px 10px;
   position: relative;
 `;
@@ -48,5 +48,5 @@ export const Info = styled.div`
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  border-radius: 0.5rem 0 0 0;
+  border-radius: 0.5rem 0;
 `;

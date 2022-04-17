@@ -15,7 +15,6 @@ export default createGlobalStyle`
         outline: 0;
         box-sizing: border-box;
         font-family: Arial, sans-serif;
-        overflow-x: hidden;
         user-select: none;
         -moz-user-select: none;
         -webkit-user-select: none;
@@ -30,6 +29,9 @@ export default createGlobalStyle`
             background-color: var(--orange-color);
             border-radius: 1rem;
         }
+    }
+    body {
+        overflow-x: hidden;
     }
   }
 `;

@@ -12,6 +12,8 @@ import {
   FormContent,
 } from "./styles";
 import Swal from "sweetalert2";
+import InputMask from "react-input-mask";
+import "./styles.css";
 
 export default function AdoptForm({ showModal, setShowModal }) {
   const [nome, setNome] = useState("");
@@ -25,7 +27,18 @@ export default function AdoptForm({ showModal, setShowModal }) {
   async function handleSubmit(e) {
     e.preventDefault();
 
-    if (!nome && !email && !telefone && !dataNascimento && !cpf && !cep) {
+    if (
+      !nome ||
+      !email ||
+      !telefone ||
+      !dataNascimento ||
+      !cpf ||
+      !cep ||
+      !nome.includes(" ") ||
+      telefone.replaceAll("_", "").length < 15 ||
+      cpf.replaceAll("_", "").length < 14 ||
+      cep.replaceAll("_", "").length < 9
+    ) {
       return Swal.fire({
         title: "Atenção!",
         text: "Preencha todos os campos!",
@@ -70,6 +83,7 @@ export default function AdoptForm({ showModal, setShowModal }) {
                 placeholder="Nome Sobrenome"
                 type="name"
                 value={nome}
+                required
                 onChange={(e) => {
                   setNome(e.target.value);
                 }}
@@ -80,6 +94,7 @@ export default function AdoptForm({ showModal, setShowModal }) {
               <Input
                 placeholder="email@email.com"
                 type="email"
+                required
                 value={email}
                 onChange={(e) => {
                   setEmail(e.target.value);
@@ -88,9 +103,12 @@ export default function AdoptForm({ showModal, setShowModal }) {
             </InputContainer>
             <InputContainer>
               <Label>Telefone</Label>
-              <Input
+              <InputMask
+                className="input"
+                mask="(99) 99999-9999"
                 placeholder="(00) 00000-0000"
                 type="text"
+                required
                 value={telefone}
                 onChange={(e) => {
                   setTelefone(e.target.value);
@@ -102,6 +120,7 @@ export default function AdoptForm({ showModal, setShowModal }) {
               <Input
                 placeholder="Data de Nascimento"
                 type="date"
+                required
                 value={dataNascimento}
                 onChange={(e) => {
                   setDataNascimento(e.target.value);
@@ -110,9 +129,12 @@ export default function AdoptForm({ showModal, setShowModal }) {
             </InputContainer>
             <InputContainer>
               <Label>CPF</Label>
-              <Input
+              <InputMask
+                className="input"
+                mask="999.999.999-99"
                 placeholder="000.000.000-00"
                 type="text"
+                required
                 value={cpf}
                 onChange={(e) => {
                   setCpf(e.target.value);
@@ -121,9 +143,12 @@ export default function AdoptForm({ showModal, setShowModal }) {
             </InputContainer>
             <InputContainer>
               <Label>CEP</Label>
-              <Input
+              <InputMask
+                className="input"
+                mask="99999-999"
                 placeholder="00000-000"
                 type="text"
+                required
                 value={cep}
                 onChange={(e) => {
                   setCep(e.target.value);

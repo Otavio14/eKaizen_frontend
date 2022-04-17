@@ -44,6 +44,7 @@ export const CloseButton = styled(MdClose)`
 export const Title = styled.h1`
   text-align: center;
   margin-bottom: 30px;
+  color: var(--orange-color);
 
   @media (max-width: 350px) {
     width: 75%;

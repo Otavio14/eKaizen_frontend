@@ -25,12 +25,15 @@ export default function Navbar() {
         <Link
           onClick={() => {
             navigate("/");
+            window.scrollTo({ top: 0, behavior: "smooth" });
+            setOpen(false);
           }}
         >
           Início
         </Link>
         <Link
           onClick={() => {
+            setOpen(false);
             if (window.location.pathname !== "/") navigate("/");
             setTimeout(() => {
               window.scrollTo({
@@ -47,6 +50,7 @@ export default function Navbar() {
         </Link>
         <Link
           onClick={() => {
+            setOpen(false);
             if (window.location.pathname !== "/") navigate("/");
             setTimeout(() => {
               window.scrollTo({
@@ -64,6 +68,8 @@ export default function Navbar() {
         </Link>
         <Link
           onClick={() => {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+            setOpen(false);
             navigate("/pets");
           }}
         >

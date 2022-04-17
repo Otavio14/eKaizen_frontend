@@ -68,6 +68,7 @@ export const CloseButton = styled(MdClose)`
 export const Title = styled.h1`
   text-align: center;
   margin-bottom: 30px;
+  color: var(--orange-color);
 
   @media (max-width: 480px) {
     width: 75%;
@@ -84,7 +85,7 @@ export const Input = styled.input`
   width: 250px;
   height: 45px;
   border-radius: 0.5rem;
-  background-color: lightgray;
+  background-color: var(--green-color);
   padding: 0 10px;
   border: none;
   font-size: 0.9rem;
@@ -97,8 +98,9 @@ export const Label = styled.label`
 export const Button = styled.button`
   text-transform: uppercase;
   width: 120px;
-  background-color: gray;
+  background-color: var(--blue-color);
   border: none;
+  color: white;
   border-radius: 1rem;
   height: 30px;
   margin-top: 30px;
