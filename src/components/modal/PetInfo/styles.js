@@ -44,7 +44,6 @@ export const CloseButton = styled(MdClose)`
 export const Title = styled.h1`
   text-align: center;
   margin-bottom: 30px;
-  /* border: 1px solid red; */
 
   @media (max-width: 350px) {
     width: 75%;
@@ -52,7 +51,6 @@ export const Title = styled.h1`
 `;
 
 export const Table = styled.table`
-  /* width: 100%; */
   border-collapse: collapse;
   border-radius: 1em 0 0 1em;
   overflow: hidden;

@@ -1,8 +1,6 @@
 import styled from "styled-components";
-import { BsInfoLg } from "react-icons/bs";
 
 export const Container = styled.div`
-  /* border: 1px solid red; */
   background-color: var(--light-green-color);
   width: 300px;
   border-radius: 1rem;

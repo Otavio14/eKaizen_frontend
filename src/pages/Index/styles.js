@@ -13,31 +13,14 @@ export const Container = styled.div`
 `;
 
 export const Animation = styled.div`
-  border: 1px solid red;
   width: 100%;
   height: 90px;
   position: relative;
-  padding: 0 200px;
+  padding: 0 5px;
 
   .person {
     width: 80px;
     position: absolute;
-    top: 0;
-  }
-  .frisbeemov {
-    width: 30px;
-    position: absolute;
-    top: 0;
-    transform: rotate(45deg);
-    transition: transform 1s;
-    transform: ${(props) => `translateX(${props.scrollposition + 40}px)`};
-    display: none;
-  }
-  .jumping {
-    width: 80px;
-    transform: scaleX(-1);
-    position: absolute;
-    display: none;
     top: 0;
   }
   .frisbee {
@@ -46,14 +29,39 @@ export const Animation = styled.div`
     width: 30px;
     z-index: 1;
     transition: transform 1s;
-    transform: ${(props) => `translateX(${props.scrollposition + 40}px)`};
+    transform: ${(props) =>
+      `translateX(${
+        props.scrollposition * (props.screenwidth / (props.screenheight - 80)) <
+        80
+          ? 80
+          : props.scrollposition *
+              (props.screenwidth / (props.screenheight - 80)) >
+            props.screenwidth - 50
+          ? props.screenwidth - 50
+          : props.scrollposition *
+            (props.screenwidth / (props.screenheight - 80))
+      }px)`};
   }
   .running {
     width: 80px;
     position: absolute;
     top: 0;
     transition: transform 2s;
-    transform: ${(props) => `translateX(${props.scrollposition - 20}px)`};
+    transform: ${(props) =>
+      `translateX(${
+        props.scrollposition * (props.screenwidth / (props.screenheight - 80)) -
+          60 <
+        80
+          ? 80
+          : props.scrollposition *
+              (props.screenwidth / (props.screenheight - 80)) -
+              60 >
+            props.screenwidth - 110
+          ? props.screenwidth - 110
+          : props.scrollposition *
+              (props.screenwidth / (props.screenheight - 80)) -
+            60
+      }px)`};
   }
 `;
 

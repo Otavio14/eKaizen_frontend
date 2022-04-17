@@ -22,21 +22,17 @@ export const LogoDiv = styled.div`
   display: flex;
   align-items: center;
   width: 300px;
-  /* height: 80px; */
-  /* border: 1px solid red; */
   justify-content: center;
 `;
 
 export const Menu = styled.nav`
   display: flex;
   align-items: center;
-  /* border: 1px solid red; */
   height: 100%;
   width: 90%;
   justify-content: center;
 
   @media (max-width: 750px) {
-    /* position: absolute; */
     width: 300px;
     left: 0;
     flex-direction: column;
@@ -80,7 +76,6 @@ export const MenuButton = styled.div`
   height: 80px;
   width: 40px;
   display: flex;
-  /* border: 1px solid red; */
   justify-content: center;
   align-items: center;
   flex-direction: column;

@@ -18,14 +18,12 @@ import { BsTelephoneFill } from "react-icons/bs";
 import { FaHandsHelping, FaYoutube } from "react-icons/fa";
 import Svg from "../../assets/background.png";
 import Frisbee from "../../assets/frisbee.png";
-import FrisbeeMov from "../../assets/frisbeeMov.png";
-import Jumping from "../../assets/jumping.png";
 import Person from "../../assets/person.png";
 import Running from "../../assets/running.png";
 
 export default function Index() {
   const [scrollPosition, setScrollPosition] = useState(0);
-  const screen = window.screen.height;
+  const screenHeight = window.screen.height;
   const screenWidth = window.screen.width;
   const handleScroll = () => {
     const position = window.pageYOffset;
@@ -38,10 +36,6 @@ export default function Index() {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
-
-  useEffect(() => {
-    console.log(scrollPosition);
-  }, [scrollPosition]);
 
   return (
     <Container>
@@ -62,10 +56,12 @@ export default function Index() {
           </svg>
         </div>
       </Main>
-      <Animation scrollposition={scrollPosition}>
+      <Animation
+        scrollposition={scrollPosition}
+        screenheight={screenHeight}
+        screenwidth={screenWidth}
+      >
         <img src={Person} className="person" alt="Error" />
-        <img src={FrisbeeMov} className="frisbeemov" alt="Error" />
-        <img src={Jumping} className="jumping" alt="Error" />
         <img src={Frisbee} className="frisbee" alt="Error" />
         <img src={Running} className="running" alt="Error" />
       </Animation>

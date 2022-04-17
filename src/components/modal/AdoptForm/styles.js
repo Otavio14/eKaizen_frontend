@@ -77,7 +77,6 @@ export const Title = styled.h1`
 export const InputContainer = styled.div`
   display: flex;
   flex-direction: column;
-  /* border: 1px solid red; */
   margin: 1rem 1rem;
 `;
 
