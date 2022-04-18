@@ -85,7 +85,7 @@ export const Main = styled.div`
 export const About = styled.div`
   display: grid;
   margin-top: 150px;
-  height: 400px;
+  height: 100%;
   width: 60vw;
   align-items: center;
   justify-content: center;
